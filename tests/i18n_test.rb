@@ -1,4 +1,3 @@
-require_relative "../item"
 require "minitest/autorun"
 
 class I18nTest < Minitest::Test
