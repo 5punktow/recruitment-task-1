@@ -36,10 +36,16 @@ module Validators
         validators.each do |validator|
           validator_instance = validator.name.instance
           next if validator_instance.valid? send(attr_name)
-          @errors << "#{attr_name} #{validator_instance.error}"
+          @errors << "#{_localized_name(attr_name)} #{validator_instance.error}"
         end
       end
       @errors.empty? ? true : false
     end
+
+    private
+
+      def _localized_name attr_name
+        I18n.t.try(:services).try(:attributes).try(self.class.name.downcase).try(attr_name) || attr_name
+      end
   end
 end

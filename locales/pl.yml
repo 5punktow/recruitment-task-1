@@ -4,3 +4,8 @@ pl:
       messages:
         blank: nie może być puste
         not_a_number: musi być liczbą
+  services:
+    attributes:
+      item:
+        name: nazwa
+        price: cena

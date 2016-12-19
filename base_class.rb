@@ -4,6 +4,7 @@ require 'yaml'
 require 'ostruct'
 require 'json'
 
+require_relative 'core_ext/object/try'
 require_relative 'lib/i18n'
 require_relative 'validators/base'
 
