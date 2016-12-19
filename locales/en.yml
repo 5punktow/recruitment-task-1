@@ -1,0 +1,6 @@
+en:
+  validators:
+    errors:
+      messages:
+        blank: can't be blank
+        not_a_number: must be number

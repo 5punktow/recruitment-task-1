@@ -1,0 +1,6 @@
+pl:
+  validators:
+    errors:
+      messages:
+        blank: nie może być puste
+        not_a_number: musi być liczbą
