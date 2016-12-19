@@ -1,8 +1,10 @@
 class I18n
   include Singleton
 
+  attr_reader :locale
+
   def initialize
-    fetch_translation
+    self.locale = 'en'
   end
 
   class << self
@@ -17,10 +19,6 @@ class I18n
     def t
       instance.t
     end
-  end
-
-  def locale
-    @locale || 'en'
   end
 
   def locale= val
